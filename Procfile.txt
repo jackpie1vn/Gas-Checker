@@ -1,0 +1,88 @@
+# 1. Cài Railway CLI
+npm i -g @railway/cli
+
+# 2. Login Railway
+railway login
+
+# 3. CD vào backend folder
+cd farcaster-gas-backend
+
+# 4. Init Railway project
+railway init
+
+# Chọn:
+# - Create new project
+# - Project name: farcaster-gas-backend
+
+
+small tip : kiểm tra file requirement xem thiếu biến gì 
+vào railway --> setting --> variable add 2 biến
+Name PORT
+Value 8080
+vào start command chạy lệnh ; uvicorn main:app --host 0.0.0.0 --port 8080
+
+# 5. Link và deploy
+railway up
+
+# 6. Add environment variables
+
+railway variables --set NEYNAR_API_KEY=C74FA811-821E-4714-B6EF-CD247EA89A81
+railway variables --set ETHEREUM_RPC=https://eth-mainnet.g.alchemy.com/v2/Fo_ZjIX96YFpx431df48q
+railway variables --set BASE_RPC=https://mainnet.base.org
+railway variables --set OPTIMISM_RPC=https://mainnet.optimism.io
+railway variables --set CORS_ORIGINS=*
+
+# 7. Generate domain (để lấy URL)
+railway domain
+
+Copy URL backend này! Ví dụ: https://farcaster-gas-backend-production.up.railway.app
+
+
+BƯỚC 2: Deploy Frontend lên Vercel với Backend URL
+
+# CD vào frontend
+cd ../frontend
+
+#vercel link
+
+#vercel --prod 
+
+làm theo yêu cầu ( bỏ cahtgpt )
+
+? Set up and deploy “~\Desktop\tool\farcaster demon test\frontend”? yes
+? Which scope should contain your project? jackpie1vn's projects
+? Link to existing project? no
+? What’s your project’s name? amonamonwale
+? In which directory is your code located? ./
+Auto-detected Project Settings (Next.js):
+  - Build Command: next build
+  - Development Command: next dev --port $PORT
+  - Install Command: `yarn install`, `pnpm install`, `npm install`, or `bun install`
+  - Output Directory: Next.js default
+? Want to modify these settings? no
+? Do you want to change additional project settings? no
+🔗  Linked to jackpie1vns-projects/amonamonwale (created .vercel)
+? Would you like to pull environment variables now? yes
+? Found existing file ".env.local". Do you want to overwrite? no
+> Canceled
+🔍  Inspect: https://vercel.com/jackpie1vns-projects/amonamonwale/DnH3bacnRZFQqboD7k4qmgekFdFm [1s]
+✅  Production: https://amonamonwale-p1yiw48h3-jackpie1vns-projects.vercel.app [42s]
+
+
+
+
+
+# Set environment variable CHO VERCEL
+vercel env add BACKEND_URL production
+
+# Paste URL backend từ Railway (không có dấu / ở cuối):
+# https://farcaster-gas-backend-production.up.railway.app
+
+trick lỏ : vào dashboard vercel --> setting 
+
+Key: BACKEND_URL
+Value: https://amon-production.up.railway.app
+Environment: Chọn cả 3 (Production, Preview, Development)
+
+# Deploy production
+vercel --prod

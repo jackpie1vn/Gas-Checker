@@ -1,0 +1,20 @@
+{
+  "frame": {
+    "name": "Gas Checker",
+    "version": "1",
+    "iconUrl": "https://raw.githubusercontent.com/jackpie1vn/checker-icon/main/gas-checker-icon.png",
+    "homeUrl": "https://https://far-4itro5kor-jackpie1vns-projects.vercel.app/",
+    "imageUrl": "https://https://far-4itro5kor-jackpie1vns-projects.vercel.app//image.png",
+    "splashImageUrl": "https://https://far-4itro5kor-jackpie1vns-projects.vercel.app//splash.png",
+    "splashBackgroundColor": "#0a0a0f",
+    "webhookUrl": "https://https://far-4itro5kor-jackpie1vns-projects.vercel.app//api/webhook",
+    "subtitle": "Check gas fees, transactions, volume in real-time",
+    "description": "Track Ethereum gas prices instantly. Get real-time updates on low, average, and high gas fees to optimize your transactions and save money on the blockchain.",
+    "primaryCategory": "utility"
+  },
+  "accountAssociation": {
+    "header": "eyJmaWQiOjM4MzY0NCwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDc2MGJhZjIyNzNhMDhiMTM2NWNBODljZDJBQkQ0ODQ3N0JDRGFhNjkifQ",
+    "payload": "eyJkb21haW4iOiJodHRwczovL2Zhci00aXRybzVrb3ItamFja3BpZTF2bnMtcHJvamVjdHMudmVyY2VsLmFwcC8ifQ",
+    "signature": "CtHfvrupMw2yJYsmjZLcLdWw7gDLC3TkGlO8VgoOjVgj1K1c17guwCU1T+efOwkilFjiSoPQSdTxgJOn9qCb3hw="
+  }
+}
